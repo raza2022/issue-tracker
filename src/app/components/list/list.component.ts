@@ -30,23 +30,11 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.issueService.getIssues().subscribe((data) => {
-      if (data instanceof Array) {
-        const users : UserData = data.map(obj => {
-          return {
-            _id: obj._id,
-            title: obj.title,
-            description: obj.description,
-            status: obj.status
-          }
-        });
-        this.dataSource = new MatTableDataSource(users);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-      }
-
-    }, error => console.log(error));
+    this.issueService.getIssues().subscribe((data: UserData[]) => {
+      this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    }, error => console.log(error))
   }
 
   applyFilter(filterValue: string) {
