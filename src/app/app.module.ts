@@ -1,7 +1,8 @@
 import { RouterModule } from "@angular/router";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule } from '@angular/material';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MaterialModule } from '../material.module'
 import { routes } from './routes'
 
 import { AppComponent } from './app.component';
@@ -21,9 +22,10 @@ import { IssueService } from './issue.service';
   ],
   imports: [
     BrowserModule,
-    MatToolbarModule,
+    MaterialModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [IssueService],
   bootstrap: [AppComponent]
