@@ -44,4 +44,8 @@ export class ListComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  test(row) {
+    console.log('row clicked', row)
+  }
 }

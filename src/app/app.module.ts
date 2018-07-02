@@ -12,18 +12,20 @@ import { EditComponent } from './components/edit/edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { IssueService } from './issue.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes), //can enable tracing with enableTracing: true as second parameter
     BrowserAnimationsModule,
     HttpClientModule
   ],
