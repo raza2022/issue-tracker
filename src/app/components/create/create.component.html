@@ -1,4 +1,11 @@
 <div class="create-issue">
+
+  <div style="margin: 23px;">
+    <span class="mat-subheading-2">Create A New Issue</span>
+  </div>
+
+  <mat-divider style="margin-bottom: 25px;"></mat-divider>
+
   <form #issueForm="ngForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
       <input matInput name="issue.title" placeholder="Title" [(ngModel)]="issue.title" required>

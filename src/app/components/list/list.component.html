@@ -1,11 +1,16 @@
 <div class="list-component">
+  <div style="margin: 23px; padding: 0 12px">
+    <a routerLink="/create"><button mat-raised-button color="primary">Create New Issue</button></a>
+  </div>
+
+  <mat-divider style="margin-bottom: 25px;"></mat-divider>
 
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
 
-  <div class="mat-elevation-z8 res">
-    <table mat-table [dataSource]="dataSource" matSort>
+  <div class="mat-elevation-z8 res" style="overflow: auto;">
+    <table mat-table [dataSource]="dataSource" matSort style="white-space: nowrap;">
 
       <!-- ID Column -->
       <ng-container matColumnDef="id">
