@@ -44,4 +44,11 @@ export class EditComponent implements OnInit {
     }, error => {console.log(error)})
   }
 
+  deleteIssue() {
+    let id = this.route.snapshot.paramMap.get('id');
+    this.issueService.deleteIssue(id).subscribe(data => {
+      this.router.navigate(['/list']);
+    }, error => { console.log(error)})
+  }
+
 }

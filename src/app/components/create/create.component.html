@@ -16,11 +16,11 @@
     </mat-form-field>
 
     <mat-form-field>
-      <textarea matInput name="issue.status" placeholder="Status" [(ngModel)]="issue.status" required></textarea>
+      <input matInput name="issue.status" placeholder="Status" [(ngModel)]="issue.status" required>
     </mat-form-field>
 
     <button mat-raised-button color="primary" type="submit" [disabled]="!issueForm.valid">Save</button>&nbsp;
-    <a mat-raised-button routerLink="/list">Back</a>
+    <button mat-raised-button routerLink="/list">Back</button>
   </form>
 
   <!--<mat-form-field>-->

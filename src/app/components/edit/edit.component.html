@@ -2,7 +2,13 @@
 
   <div style="margin: 23px;">
     <span class="mat-subheading-2">Update Issue</span>
+    <div style="float: right; cursor: pointer" (click)="deleteIssue()">
+      <mat-icon color="warn" matTooltip="delete Issue">delete</mat-icon>
+    </div>
   </div>
+
+
+
 
   <mat-divider style="margin-bottom: 25px;"></mat-divider>
 
@@ -16,11 +22,11 @@
   </mat-form-field>
 
   <mat-form-field>
-    <textarea matInput name="issue.status" placeholder="Status" [(ngModel)]="issue.status" required></textarea>
+    <input matInput name="issue.status" placeholder="Status" [(ngModel)]="issue.status" required>
   </mat-form-field>
 
     <button mat-raised-button color="primary" type="submit" [disabled]="!issueForm.valid">Update</button>&nbsp;
-    <a mat-raised-button routerLink="/list">Back</a>
+    <button mat-raised-button routerLink="/list">Back</button>
   </form>
 
   <!--<mat-form-field>-->
