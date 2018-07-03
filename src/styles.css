@@ -6,3 +6,7 @@ body { margin: 0; }
 .pointer{
   cursor: pointer;
 }
+
+.views-container {
+  margin: 20px 20px;
+}

@@ -10,9 +10,7 @@ export interface UserData {
   status: string;
 }
 
-/**
- * @title Data table with sorting, pagination, and filtering.
- */
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -46,6 +44,6 @@ export class ListComponent implements OnInit {
   }
 
   test(row) {
-    console.log('row clicked', row)
+    // console.log('row clicked', row)
   }
 }

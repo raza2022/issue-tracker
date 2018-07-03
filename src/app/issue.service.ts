@@ -26,15 +26,17 @@ export class IssueService {
     return this.http.post(`${this.uri}/issues`, issue);
   }
 
-  updateIssue(id, title, responsible, description, severity, status) {
+  updateIssue(update) {
+    let {_id, title, responsible, description, severity, status} = update;
     const issue = {
-      title: title,
-      responsible: responsible,
-      description: description,
-      severity: severity,
-      status: status
+      _id,
+      title,
+      responsible,
+      description,
+      severity,
+      status
     };
-    return this.http.post(`${this.uri}/issues/update/${id}`, issue);
+    return this.http.post(`${this.uri}/issues/update/${_id}`, issue);
   }
 
   deleteIssue(id) {

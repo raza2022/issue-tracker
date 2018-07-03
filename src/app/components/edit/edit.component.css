@@ -1,0 +1,8 @@
+.edit-issue {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-issue > form > mat-form-field {
+  width: 100%;
+}
