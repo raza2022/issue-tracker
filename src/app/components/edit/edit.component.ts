@@ -4,8 +4,6 @@ import { Router, ParamMap, ActivatedRoute, } from "@angular/router";
 import { switchMap } from 'rxjs/operators';
 
 import { IssueService } from "../../issue.service";
-import { Observable} from "rxjs/index";
-import {catchError} from "rxjs/internal/operators";
 
 
 

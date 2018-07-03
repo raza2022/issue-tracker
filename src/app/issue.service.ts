@@ -16,12 +16,13 @@ export class IssueService {
     return this.http.get(`${this.uri}/issues/${id}`);
   }
 
-  addIssue(title, responsible, description, severity) {
+  addIssue(issueObj) {
+    let {title, responsible, description, severity} = issueObj;
     const issue = {
-      title: title,
-      responsible: responsible,
-      description: description,
-      severity: severity
+      title,
+      responsible,
+      description,
+      severity
     };
     return this.http.post(`${this.uri}/issues`, issue);
   }

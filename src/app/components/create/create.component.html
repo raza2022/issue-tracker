@@ -1,3 +1,24 @@
-<p>
-  create works!
-</p>
+<div class="create-issue">
+  <form #issueForm="ngForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput name="issue.title" placeholder="Title" [(ngModel)]="issue.title" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput name="issue.description" placeholder="Description" [(ngModel)]="issue.description" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput name="issue.status" placeholder="Status" [(ngModel)]="issue.status" required></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!issueForm.valid">Save</button>&nbsp;
+    <a mat-raised-button routerLink="/list">Back</a>
+  </form>
+
+  <!--<mat-form-field>-->
+  <!--<mat-select placeholder="Select">-->
+  <!--<mat-option value="option">Option</mat-option>-->
+  <!--</mat-select>-->
+  <!--</mat-form-field>-->
+</div>

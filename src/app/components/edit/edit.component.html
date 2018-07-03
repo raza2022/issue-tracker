@@ -1,5 +1,5 @@
 <div class="edit-issue">
-  <form (ngSubmit)="onSubmit()">
+  <form #issueForm="ngForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <input matInput name="issue.title" placeholder="Title" [(ngModel)]="issue.title" required>
   </mat-form-field>
@@ -12,7 +12,7 @@
     <textarea matInput name="issue.status" placeholder="Status" [(ngModel)]="issue.status" required></textarea>
   </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit">Submit</button>&nbsp;
+    <button mat-raised-button color="primary" type="submit" [disabled]="!issueForm.valid">Update</button>&nbsp;
     <a mat-raised-button routerLink="/list">Back</a>
   </form>
 
